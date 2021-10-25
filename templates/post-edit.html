@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+    <h1>Edit Post</h1>
+    <form method="post">
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <input type="text" name='title' class="form-control" value="{{post.title}}" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Content</label>
+            <textarea class="form-control" name='content' id="exampleFormControlTextarea1" rows="3">{{post.content}}</textarea>
+        </div>
+        {% for tag in tags %} {% if tag in post.tags %}
+        <div class="form-check">
+            <input checked class="form-check-input" type="checkbox" name="{{tag.id}}" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                    </label> {{tag.name}}
+        </div>
+        {% else %}
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="{{tag.id}}" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                    </label> {{tag.name}}
+        </div>
+        {% endif %} {% endfor %}
+        <button class="btn btn-primary"> Edit Post</button>
+    </form>
+</div>
+{% endblock content %}

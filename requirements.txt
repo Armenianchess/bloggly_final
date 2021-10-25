@@ -1,0 +1,14 @@
+click
+dataclasses
+Flask
+Flask-SQLAlchemy
+greenlet
+importlib-metadata
+itsdangerous
+Jinja2
+MarkupSafe
+psycopg2-binary
+SQLAlchemy
+typing-extensions
+Werkzeug
+zipp

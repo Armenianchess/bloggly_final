@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+
+<img src="{{filter_user.image_url}}" style="width:100px" alt=""> {{filter_user.first_name}} {{filter_user.last_name}}
+<br>
+
+<br>
+<a class="btn btn-primary" href="/user/{{filter_user.id}}/edit">Edit</a>
+
+<a class="btn btn-danger" href="/users/{{filter_user.id}}/delete">Delete</a>
+
+<hr>
+<h2>Posts</h2>
+<ul>
+    {% for post in filter_post %}
+
+    <li><a href="/posts/{{post.id}}/detail">{{post.title}}</a></li>
+    {% endfor %}
+</ul>
+<a class="btn btn-primary" href="/users/{{filter_user.id}}/posts/new">Add Posts</a> {% endblock content %}

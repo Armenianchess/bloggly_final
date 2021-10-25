@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+<h1>Add Users</h1>
+<form action="/user/new" method="POST">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">First Name</label>
+        <input name="first_name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter First name">
+      </div>
+    
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+        <input name="last_name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Last name">
+      </div>
+    
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Image url</label>
+        <input name="img" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Img url">
+      </div>
+
+      <div class="mb-3">
+
+        <a href="/" class="btn btn-secondary">Cancel</a>
+        <button class="btn btn-primary">Submit</button>
+      </div>
+
+
+    
+</form>
+
+</div>
+
+
+{% endblock content %}
